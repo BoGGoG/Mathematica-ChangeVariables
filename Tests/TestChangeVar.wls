@@ -2,13 +2,13 @@
 (* ::Package:: *)
 
 (* ::Title:: *)
-(*Test ChangeVar*)
+(*Test ChangeVariables*)
 
 
 (* ::Text:: *)
 (*Note that implicitly we convert a function f[r] to a different function g[u] = f[1/u] (or f[fromVarDef]) and call g f again.*)
 (**)
-(*ChangeVar[expression, fromVar, toVar, toVarDef]*)
+(*ChangeVariables[expression, fromVar, toVar, toVarDef]*)
 (**)
 (*ToDo*)
 (*- write tests that actually test the correctness and not just call the function*)
@@ -23,10 +23,8 @@
 
 
 (* ::Input::Initialization:: *)
-sourceFolder = "source";
-sourcePath = FileNameJoin[{ParentDirectory@NotebookDirectory[], sourceFolder}];
-$Path=Once[Append[$Path,sourcePath]];
-<<"DeriveEinsteinEquationsFollowingCartwright`"
+packagePath = FileNameJoin[{ParentDirectory[NotebookDirectory[]], "ChangeVariables.wl"}];
+Get[packagePath]
 
 
 (* ::Input::Initialization:: *)
@@ -139,12 +137,3 @@ ChangeVariables[D[f[x,t],x,x]+D[f[x,t],x,t]+g[x], x, r, (#^(1/2)&)] // Simplify 
 
 (* ::Text:: *)
 (*Test whatever you want here. If it's a useful test you can then put it in the section above.*)
-
-
-(* ::Code:: *)
-(*(*Quit[]*)*)
-
-
-(* ::Code:: *)
-(*$Path=Once[Append[$Path,ParentDirectory[NotebookDirectory[]]]];*)
-(*<<"DeriveEinsteinEquationsFollowingCartwright`"*)

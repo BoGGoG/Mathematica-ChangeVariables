@@ -28,7 +28,7 @@ ClearAll["ChangeVariables`*", "ChangeVariables`Private`*"];
 (*Messages and documentation for public facing functions go here. *)
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Messages "ChangeVariables"*)
 
 
@@ -45,6 +45,14 @@ Works for arbitrary functions with arbitrary amounts of arguments.
 WARNING: There is a problem with internal functions like Times, Plus, ...
 	They need to be 'filtered out' in the function containsNoForbiddenFunction. If you encounter mistakes in the change of variables this might be the reason. It is a nasty 'bug' because there is no message or error message, it's simply wrong if there is a function that is not listed in containsNoForbiddenFunction. More details  on this in the Definition of containsNoForbiddenFunction. I might add an option for white or blacklisting of functions at some point.
 ";
+
+
+(* ::Section:: *)
+(*Messages "TransformNthDeriv*)
+
+
+TransformNthDeriv::usage="Internal function, just public for testing. Usage:
+TransformNthDeriv[f[r], r, u, (1 / # &), {1}] transforms the first derivative of f with respect to r with the definition u=1/r.";
 
 
 (* ::Title:: *)

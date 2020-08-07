@@ -18,6 +18,10 @@
 (*Get[packagePath]*)
 
 
+(* ::Input:: *)
+(*?ChangeVariables*)
+
+
 (* ::Section:: *)
 (*Examples*)
 
