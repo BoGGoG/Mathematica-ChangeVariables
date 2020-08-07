@@ -15,6 +15,8 @@ Output:
 {-r (f^(1,0))[r,y]}
 ```
 
+You can find examples in `UseChangeVariables.wls` or in `Tests/TestChangeVariables.wls`.
+
 Installation
 ----------------------------------------
 
