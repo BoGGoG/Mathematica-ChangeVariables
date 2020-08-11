@@ -13,13 +13,13 @@
 (*If you find any bug or change of variables that does not give the correct answers please message me on github https://github.com/BoGGoG/Mathematica-ChangeVariables or best: Create an issue on github =)*)
 
 
-(* ::Input:: *)
-(*packagePath = FileNameJoin[{NotebookDirectory[], "ChangeVariables.wl"}];*)
-(*Get[packagePath]*)
+(* ::Input::Initialization:: *)
+packagePath = FileNameJoin[{NotebookDirectory[], "ChangeVariables.wl"}];
+Get[packagePath]
 
 
-(* ::Input:: *)
-(*?ChangeVariables*)
+(* ::Input::Initialization:: *)
+?ChangeVariables
 
 
 (* ::Section:: *)
@@ -32,16 +32,16 @@
 (*If you want to change from x to u=x^2, then you write:*)
 
 
-(* ::Input:: *)
-(*ChangeVariables[x f[x], x, u, (#^2&)]*)
+(* ::Input::Initialization:: *)
+ChangeVariables[x f[x], x, u, (#^2&)]
 
 
 (* ::Text:: *)
 (*Note the two solutions, because x = +- Sqrt[u].*)
 
 
-(* ::Input:: *)
-(*ChangeVariables[Cos[x] f[x,y], x, u, (Cos[#] &)]*)
+(* ::Input::Initialization:: *)
+ChangeVariables[Cos[x] f[x,y], x, u, (Cos[#] &)]
 
 
 (* ::Text:: *)
@@ -52,13 +52,13 @@
 (*Derivatives also work: x -> u = Sqrt[x]*)
 
 
-(* ::Input:: *)
-(*ChangeVariables[x D[f[a,b,x,y,z], x], x, u, (#^(1/2)&)]*)
+(* ::Input::Initialization:: *)
+ChangeVariables[x D[f[a,b,x,y,z], x], x, u, (#^(1/2)&)]
 
 
-(* ::Input:: *)
-(*ChangeVariables[D[f[x],x], x, r, (1/#&)]*)
+(* ::Input::Initialization:: *)
+ChangeVariables[D[f[x],x], x, r, (1/#&)]
 
 
-(* ::Input:: *)
-(*ChangeVariables[Cos[x] D[f[x,y], {x,2}], x, u, (Cos[#] &)]*)
+(* ::Input::Initialization:: *)
+ChangeVariables[Cos[x] D[f[x,y], {x,2}], x, u, (Cos[#] &)]
