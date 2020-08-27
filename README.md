@@ -45,3 +45,8 @@ ToDo
 - Option to give inverse function as argument, e.g. if `x`->`y=Log[x]` you could give `Exp[#]&` instead and let Mathematica invert.
 - Clean up source code such that it is actually readable.
 - Tests.
+
+Author
+----------------------------------------
+Marco Knipfer   
+University of Alabama
