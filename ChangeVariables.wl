@@ -133,7 +133,7 @@ But r f[r] is internally Times[r,f[r]] so I need to filter out the times, becaus
 Thus this ugly function
 *) 
 containsNoForbiddenFunction[f_] := Block[{forbiddenFunctions, checkList},
-forbiddenFunctions = {Plus, Minus, Times, Cos, Sin, Tan, Exp, Log, ArcCos, ArcSin}; (* basically every built in function, is there a way to find all build in functions? *)
+forbiddenFunctions = {Plus, Minus, Times, Cos, Sin, Tan, Exp, Log, ArcCos, ArcSin, Power}; (* basically every built in function, is there a way to find all build in functions? *)
 checkList = Map[FreeQ[f, #]&, forbiddenFunctions];
 And@@checkList
 ]

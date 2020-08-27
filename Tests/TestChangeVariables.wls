@@ -35,6 +35,9 @@ ChangeVariables[f[r], r, u, (1/# &)]
 ChangeVariables[r f[r], r, u, (1/# &)]
 
 
+ChangeVariables[r^(-3) f[r], r, u, (1/# &)]
+
+
 ChangeVariables[f'[r], r, u, (1/# &)]
 
 
